@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWU Incubation Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 ">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-800 text-white shadow-lg ">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <div class="flex items-center space-x-4">
+                <img src="./fu.jpg" alt="FWU Logo" class="h-12 rounded">
+                <a href="#" class="text-2xl font-bold">FWU Incubation Center</a>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-300">About</a></li>
+                <li><a href="#programs" class="hover:text-gray-300">Programs</a></li>
+                <li><a href="#vc-message" class="hover:text-gray-300">VC Message</a></li>
+                <li><a href="#apply"  class="px-4 py-2 bg-white text-blue-800 rounded">Apply Now</a></li>
+            </ul>
+            <button class="md:hidden bg-white text-blue-800 p-2 rounded">Menu</button>
+        </div>
+    </nav>
+    <hr class="border-2 border-white" >
+
+    <!-- Hero Section with Image Carousel and VC Message Card -->
+    <section class="bg-blue-800 text-white py-16">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+            <!-- Image Carousel -->
+            <div class="carousel relative">
+                <div class="carousel-images">
+                    <img src="https://cdn.pixabay.com/photo/2014/12/08/21/25/innovation-561388_1280.jpg" alt="Startup Image 1" class="rounded-lg shadow-lg">
+                    <img src="https://cdn.pixabay.com/photo/2018/05/11/09/07/finger-3389916_1280.jpg" alt="Startup Image 2" class="rounded-lg shadow-lg hidden">
+                    <img src="https://cdn.pixabay.com/photo/2022/08/23/05/52/lamp-7405071_1280.jpg" alt="Startup Image 3" class="rounded-lg shadow-lg hidden">
+                </div>
+                <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-blue-800 p-2 rounded-full">❮</button>
+                <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-blue-800 p-2 rounded-full">❯</button>
+            </div>
+
+            <!-- VC Message Card Component -->
+            <div id="vc-message" class="bg-white text-blue-900 rounded-lg shadow-lg p-8 border border-gray-200">
+                <div class="flex items-center space-x-4">
+                    <img src="./profile.jpg" alt="VC Image" class="h-24 w-24 rounded-full shadow-md">
+                    <div>
+                        <h2 class="text-2xl font-bold">Dr. Hem Raj Pant</h2>
+                        <p class="text-sm text-gray-600">Vice Chancellor</p>
+                    </div>
+                </div>
+                <p class="mt-4 text-lg leading-relaxed">
+                    "Far-Western University Incubation Center is committed to nurturing the next generation of innovators.
+                    Our goal is to provide state-of-the-art technology, mentorship, and a collaborative environment for aspiring entrepreneurs."
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-blue-800 mb-6">About the Incubation Center</h2>
+            <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                The Far-Western University Incubation Center is dedicated to fostering innovation and entrepreneurship. We provide mentorship, resources, and a collaborative environment to turn ideas into successful startups.
+            </p>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-blue-800 mb-6">Our Programs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition border-4 border-blue-800">
+                    <h3 class="text-2xl font-bold mb-4">Startup Accelerator</h3>
+                    <p class="text-gray-600">A 6-month intensive program to fast-track your startup's growth.</p>
+                </div>
+                <div class="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition border-4 border-blue-800">
+                    <h3 class="text-2xl font-bold mb-4">Mentorship Program</h3>
+                    <p class="text-gray-600">Get guidance from experienced entrepreneurs and industry experts.</p>
+                </div>
+                <div class="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition border-4 border-blue-800">
+                    <h3 class="text-2xl font-bold mb-4">Funding Opportunities</h3>
+                    <p class="text-gray-600">Access funding opportunities through our network of investors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-200">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-blue-800 mb-10">Startups We've Supported</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition">
+                    <img src="./demo.jpg" alt="Startup Logo" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Meetup Startup</h3>
+                    <p class="text-gray-600">A brief description of this startup and its success story.</p>
+                </div>
+                <div class="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition">
+                    <img src="./demo.jpg" alt="Startup Logo" class="mx-auto mb-4 border-4 ">
+                    <h3 class="text-2xl font-bold mb-2">Infinite Startup</h3>
+                    <p class="text-gray-600">A brief description of this startup and its success story.</p>
+                </div> 
+                <div class="bg-white p-8 shadow-lg rounded-lg hover:shadow-2xl transition">
+                    <img src="./demo.jpg" alt="Startup Logo" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">GenZ startup</h3>
+                    <p class="text-gray-600">A brief description of this startup and its success story.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <!-- Mentorship Section -->
+     <section class="py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-blue-800 mb-16">Meet Our Mentors</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 shadow-xl rounded-lg border-4 border-blue-700 ">
+                    <img src="./elon.jpg" alt="Mentor Photo" class="mx-auto mb-4 rounded-full border-4  p-4 ">
+                    <h3 class="text-2xl font-bold mb-2">Elon Musk</h3>
+                    <p class="text-gray-600">Expertise in technology and startup growth.</p>
+                </div>
+                <div class="bg-white p-8 shadow-2xl rounded-lg border-4 border-blue-700">
+                    <img src="./mark.jpg" alt="Mentor Photo" class="mx-auto mb-5 rounded-full border-4 p-4">
+                    <h3 class="text-2xl font-bold mb-2">Mark Zuckerberg</h3>
+                    <p class="text-gray-600">Expertise in technology and startup growth.</p>
+                </div>
+    
+                <div class="bg-white p-8 shadow-xl rounded-lg border-4 border-blue-700">
+                    <img src="./elon.jpg" alt="Mentor Photo" class="mx-auto mb-4 rounded-full border-4  p-4">
+                    <h3 class="text-2xl font-bold mb-2">Elon Musk</h3>
+                    <p class="text-gray-600">Expertise in technology and startup growth.</p>
+                </div>
+    
+    
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Apply Now Section -->
+    <section id="apply" class="bg-blue-800 text-white text-center py-16">
+        <div class="container mx-auto ">
+            <h2 class="text-4xl font-bold mb-4">Ready to Join the Incubation Center?</h2>
+            <p class="text-xl mb-8">Submit your application and start your entrepreneurial journey with us.</p>
+            <a href="#" class="bg-white text-blue-900 py-4 px-10 rounded-full font-bold text-lg h transition shadow-xl">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact" class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+            <p class="mb-8">Have any questions? Reach out to us at <a href="mailto:Incubation@fwu.edu.np" class="text-blue-400">Incubation@fwu.edu.np</a> or call +977-5254000.</p>
+            <p>Far Western University, Faculty of Innovation, Nepal</p>
+        </div>
+    </footer>
+
+    <script>
+        // Image Carousel Logic
+        const images = document.querySelectorAll('.carousel-images img');
+        let current = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('hidden', i !== index);
+            });
+        }
+
+        document.getElementById('prev').addEventListener('click', () => {
+            current = (current === 0) ? images.length - 1 : current - 1;
+            showImage(current);
+        });
+
+        document.getElementById('next').addEventListener('click', () => {
+            current = (current === images.length - 1) ? 0 : current + 1;
+            showImage(current);
+        });
+
+        showImage(current);
+    </script>
+
+</body>
+
+</html>
+
